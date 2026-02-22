@@ -1,0 +1,445 @@
+/* -------------------- RESET -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* -------------------- BODY -------------------- */
+body {
+    background-color: #4b4242;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    background-color: #060707;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+nav {
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* -------------------- SECTIONS -------------------- */
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+/* Exemple pour les services ou projets */
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+#service-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+    z-index: 1000;
+}
+#service-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+    z-index: 1000;
+}
+
+#service-details.hidden {
+    display: none;
+}
+
+#close-details {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+/* -------------------- CONTACT -------------------- */
+.contact {
+    background-color: #004080;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h3 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------- BOUTONS -------------------- */
+button, .btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #004080;
+}
+#topBtn {
+    display: none; /* caché par défaut */
+    position: fixed; /* reste fixé à l'écran */
+    bottom: 30px; /* distance du bas */
+    right: 30px; /* distance de la droite */
+    z-index: 100; /* devant tout */
+    font-size: 20px; /* taille du texte */
+    border: none; /* pas de bordure */
+    outline: none; /* pas de contour */
+    background-color: #007acc; /* couleur de fond */
+    color: white; /* couleur du texte */
+    cursor: pointer; /* curseur main */
+    padding: 12px 18px; /* espace à l'intérieur du bouton */
+    border-radius: 5px; /* coins arrondis */
+    transition: background-color 0.3s; /* effet au survol */
+}
+
+#topBtn:hover {
+    background-color: #005fa3; /* couleur au survol */
+}
+/* SLIDER */
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-slide {
+    display: none;
+}
+
+.slider-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0,0,0,0.5);
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* Fond global de la section Services */
+#services {
+    background-color: #f0f4f8; /* couleur claire pour le contraste */
+    padding: 60px 20px;
+}
+
+/* Titre de la section */
+#services h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333; /* texte foncé pour contraste */
+}
+
+/* Container des cartes */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartes des services */
+.service-card {
+    flex: 1 1 280px;
+    border-radius: 12px;
+    padding: 25px;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 250px;
+}
+
+/* Couleurs par type de service */
+.service-card.construction {
+    background-color: #1e90ff; /* Bleu */
+}
+
+.service-card.renovation {
+    background-color: #28a745; /* Vert */
+}
+
+.service-card.travaux {
+    background-color: #ff8c00; /* Orange */
+}
+
+/* Icône */
+.service-card .icon {
+    font-size: 3em;
+}
+
+/* Titres des cartes */
+.service-card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+/* Liste des services */
+.service-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Effet au survol */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Couleurs différentes */
+.construction {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.renovation {
+    background: linear-gradient(135deg, #2196f3, #0d47a1);
+}
+
+.travaux {
+    background: linear-gradient(135deg, #4caf50, #1b5e20);
+}
+
+/* Icônes */
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    list-style: none;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.service-card ul li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.service-card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+}
+/* ================= PROJETS ================= */
+
+.projets {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.projets h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #004080;
+}
+
+.projets-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.projet-card {
+    width: 280px; /* largeur réduite */
+    background: #f4f4f4;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE REDUITE */
+.projet-card img {
+    width: 100%;
+    height: 160px; /* hauteur réduite */
+    object-fit: cover;
+}
+
+.projet-card h3 {
+    margin: 15px 0 10px;
+    color: #0066cc;
+}
+
+.projet-card p {
+    padding: 0 15px 20px;
+}.projet-card img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+    display: block;
+    .realisations {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+}/* ================= A PROPOS ================= */
+
+.apropos {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+}
+
+.apropos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.apropos-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.apropos-text h2 {
+    font-size: 32px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.apropos-text p {
+    margin-bottom: 20px;
+}
+
+.apropos-text ul {
+    list-style: none;
+}
+
+.apropos-text li {
+    margin-bottom: 10px;
+}
+
+.apropos-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.apropos-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.realisations h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+/* ===== BOUTON WHATSAPP CORRIGÉ ===== */
+
